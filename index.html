@@ -59,17 +59,29 @@
             font-weight: bold;
             border-radius: 50px;
             cursor: pointer;
-            transition: transform 0.2s, box-shadow 0.2s;
+            transition: transform 0.2s, box-shadow 0.2s, color 0.2s;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            position: relative;
         }
 
         .contact-button:hover {
             transform: translateY(-2px);
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+            color: #ffffff;
+            background: linear-gradient(90deg, #ff7a18, #af002d, #319197, #7b2ff7);
+            background-size: 300% 300%;
+            animation: gradientShift 3s linear infinite;
         }
 
         .contact-button:active {
             transform: translateY(0);
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
         }
     </style>
 </head>
