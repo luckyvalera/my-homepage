@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Homepage</title>
+    <link rel="stylesheet" href="weather-widget.css">
     <style>
         * {
             margin: 0;
@@ -90,6 +91,22 @@
         <h1 class="intro">Hello, World!</h1>
         <img src="https://raw.githubusercontent.com/luckyvalera/my-homepage/main/profileheadshot.png" alt="Profile Photo" class="profile-photo">
         <button class="contact-button">Contact Me</button>
+        
+        <!-- Weather Widget Container -->
+        <div id="weather-widget" class="weather-container">
+            <div class="weather-loading" id="weather-loading">
+                <div class="loading-spinner"></div>
+                <p>Loading weather...</p>
+            </div>
+            <div class="weather-content" id="weather-content" style="display: none;">
+                <!-- Weather data will be inserted here -->
+            </div>
+            <div class="weather-error" id="weather-error" style="display: none;">
+                <p>Unable to load weather data</p>
+                <button onclick="weatherWidget.init()" class="retry-btn">Retry</button>
+            </div>
+        </div>
     </div>
-</body>
+    
+    <script src="weather-widget.js"></script>
 </html>
